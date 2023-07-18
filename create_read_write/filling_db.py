@@ -8,7 +8,7 @@ from create_read_write.models import Author, Quote, Contact
 
 connect(
     db="mein",
-    host="mongodb+srv://remmover:789456@cluster0.uhuxtdj.mongodb.net/?retryWrites=true&w=majority"
+    host="mongodb+srv://remmover:******@cluster0.uhuxtdj.mongodb.net/?retryWrites=true&w=majority"
 )
 
 fake = Faker()
