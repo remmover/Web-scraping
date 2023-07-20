@@ -51,20 +51,20 @@ def save_quotes_to_database(quotes):
         print(f"Error loading quotes data: {str(e)}")
 
 
-def save_contacts_to_database():
-    Contact.objects().delete()
-    try:
-        for _ in range(30):
-            Contact(
-                fullname=fake.name(),
-                email=fake.email(),
-                phone=fake.phone_number(),
-                preferred_contact_method=random.choice(["email", "sms"]),
-                logic_=False,
-            ).save()
-        print("Contacts data loaded successfully.")
-    except Exception as e:
-        print(f"Error loading quotes data: {str(e)}")
+# def save_contacts_to_database():
+#     Contact.objects().delete()
+#     try:
+#         for _ in range(30):
+#             Contact(
+#                 fullname=fake.name(),
+#                 email=fake.email(),
+#                 phone=fake.phone_number(),
+#                 preferred_contact_method=random.choice(["email", "sms"]),
+#                 logic_=False,
+#             ).save()
+#         print("Contacts data loaded successfully.")
+#     except Exception as e:
+#         print(f"Error loading quotes data: {str(e)}")
 
 
 def main():
@@ -76,7 +76,7 @@ def main():
 
     save_authors_to_database(authors_data)
     save_quotes_to_database(quotes_data)
-    save_contacts_to_database()
+    # save_contacts_to_database()
 
 
 if __name__ == "__main__":
